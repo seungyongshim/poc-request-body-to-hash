@@ -22,6 +22,6 @@ public class UnitTest1
 
         var body = await ret.GetJsonAsync<Result>();
 
-        Assert.Equal(body.Hash, "YL2LE6OZGH+XT7uP4OiZxVD7CRaWrpp4VsM6STI5k2uKfyS0IOWdbiz4oAb6Ta4IhUVcw48pkYo8IL1IeekQgw==");
+        Assert.Equal("YL2LE6OZGH+XT7uP4OiZxVD7CRaWrpp4VsM6STI5k2uKfyS0IOWdbiz4oAb6Ta4IhUVcw48pkYo8IL1IeekQgw==", body.Hash);
     }
 }
