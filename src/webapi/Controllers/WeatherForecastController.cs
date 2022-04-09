@@ -16,7 +16,7 @@ public class HashTestController : ControllerBase
         return Ok(new
         {
             Body= hello,
-            Hash= Request.Headers["HashSHA512"]
+            Hash= Request.Headers["HashSHA512"][0]
         });
     }
 }
