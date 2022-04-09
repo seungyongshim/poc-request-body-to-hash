@@ -12,11 +12,7 @@ public class UnitTest1
     [Fact]
     public async Task Test1()
     {
-        var application = new WebApplicationFactory<Program>()
-        .WithWebHostBuilder(builder =>
-        {
-            // ... Configure test services
-        });
+        var application = new WebApplicationFactory<Program>();
 
         using var client = application.CreateClient();
         using var flu = new FlurlClient(client);
