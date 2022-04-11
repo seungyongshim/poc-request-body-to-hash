@@ -14,7 +14,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthorization();
 
-app.Use((context, next)=>
+app.Use((context, next) =>
 {
     context.Request.EnableBuffering();
     return next(context);
