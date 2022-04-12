@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2022-04-12_02-00-33" tag="11_2152250506">
+  <assembly name="webapi">
+    <class name="Program" coveredlines="18" coverablelines="18" totallines="28" coveredbranches="2" totalbranches="2" coveredcodeelements="1" totalcodeelements="1" />
+    <class name="webapi.Controllers.HashTestController" coveredlines="7" coverablelines="7" totallines="22" coveredbranches="0" totalbranches="0" coveredcodeelements="1" totalcodeelements="1" />
+    <class name="webapi.Dto.HelloDto" coveredlines="1" coverablelines="1" totallines="4" coveredbranches="0" totalbranches="0" coveredcodeelements="1" totalcodeelements="1" />
+    <class name="webapi.Filter.RequestHashAttribute" coveredlines="8" coverablelines="8" totallines="20" coveredbranches="0" totalbranches="0" coveredcodeelements="1" totalcodeelements="1" />
+  </assembly>
+</coverage>
