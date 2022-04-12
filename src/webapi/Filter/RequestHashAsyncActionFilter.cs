@@ -3,10 +3,9 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace webapi.Filter;
 
-public class RequestHashAsyncActionFilter : IAsyncActionFilter
+public class RequestHashAttribute : ActionFilterAttribute
 {
-    public async Task OnActionExecutionAsync(ActionExecutingContext context,
-                                             ActionExecutionDelegate next)
+    public override async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
     {
         var req = context.HttpContext.Request;
         req.Body.Position = 0;
@@ -16,6 +15,6 @@ public class RequestHashAsyncActionFilter : IAsyncActionFilter
 
         req.Headers.Add("HashSHA512", Convert.ToBase64String(hash));
 
-        await next();
+        await base.OnActionExecutionAsync(context, next);
     }
 }

@@ -6,10 +6,10 @@ namespace webapi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-[TypeFilter(typeof(RequestHashAsyncActionFilter))]
 public class HashTestController : ControllerBase
 {
     [HttpPost]
+    [RequestHash]
     public async Task<ActionResult> Test([FromHeader] string? What,
                                          [FromBody] HelloDto hello)
     {
